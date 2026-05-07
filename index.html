@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="font-loading">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mein Haus Eventos | O espaço perfeito para o seu evento em São José, SC</title>
-    <meta name="description" content="Estrutura completa para eventos corporativos, casamentos e aniversários em São José, SC. Buffet incluso, espaço para até 250 pessoas.">
+    <meta name="description"
+        content="Estrutura completa para eventos corporativos, casamentos e aniversários em São José, SC. Buffet incluso, espaço para até 250 pessoas.">
     <meta property="og:title" content="Mein Haus Eventos | Espaço premium para eventos">
-    <meta property="og:description" content="Estrutura completa para até 250 pessoas com buffet personalizado em São José, SC.">
+    <meta property="og:description"
+        content="Estrutura completa para até 250 pessoas com buffet personalizado em São José, SC.">
     <meta property="og:type" content="website">
 
     <!-- Preconnect -->
@@ -15,36 +18,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Inline Styles (style.css + GreatPages Breakout) -->
+    <!-- Inline Styles -->
     <style>
-        /* ═══════════════════════════════════════════════════════
-           GREATPAGES BREAKOUT & RESPONSIVENESS
-           ═══════════════════════════════════════════════════════ */
-        .mh-page-breakout {
-            width: 100vw !important;
-            max-width: 100vw !important;
-            position: relative !important;
-            left: 50% !important;
-            right: 50% !important;
-            margin-left: -50vw !important;
-            margin-right: -50vw !important;
-            overflow-x: hidden !important;
-            background: var(--white);
-            display: block !important;
-            min-height: 100vh !important;
-        }
-
-        /* Prevent GreatPages from clipping content vertically and shrinking fonts */
-        html, body {
-            height: auto !important;
-            min-height: 100vh !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            font-size: 16px !important; /* Forces 1rem to be 16px, overriding GreatPages 10px scale */
-        }
-
         /* ═══════════════════════════════════════════════════════
            MEIN HAUS EVENTOS — Premium Design System (Inlined)
            ═══════════════════════════════════════════════════════ */
@@ -52,13 +31,13 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        
+
         /* Initial state is handled by JS for better UX */
         body {
             opacity: 1;
             transition: opacity 0.3s ease;
         }
-        
+
         :root {
             --navy: #0D1B2A;
             --navy-medium: #1A2E45;
@@ -84,13 +63,15 @@
             --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
             --transition: all 0.6s var(--ease-out);
         }
-        
-        *, *::before, *::after {
+
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--navy);
@@ -98,14 +79,16 @@
             overflow-x: hidden;
             background: var(--white);
         }
-        
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             line-height: 1.15;
             letter-spacing: -0.02em;
         }
-        
+
         .eyebrow {
             font-family: 'Inter', sans-serif;
             text-transform: uppercase;
@@ -117,7 +100,7 @@
             align-items: center;
             gap: 1rem;
         }
-        
+
         .eyebrow::before,
         .eyebrow::after {
             content: '';
@@ -126,17 +109,17 @@
             background: var(--gold);
             flex-shrink: 0;
         }
-        
+
         .eyebrow.center {
             justify-content: center;
         }
-        
+
         .container {
             max-width: 1340px;
             margin: 0 auto;
             padding: 0 2.5rem;
         }
-        
+
         /* PRELOADER */
         .preloader {
             position: fixed;
@@ -149,7 +132,7 @@
             flex-direction: column;
             gap: 2rem;
         }
-        
+
         .preloader-logo {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
@@ -157,7 +140,7 @@
             opacity: 0;
             transform: translateY(20px);
         }
-        
+
         .preloader-sub {
             font-family: 'Inter', sans-serif;
             font-size: 0.75rem;
@@ -166,7 +149,7 @@
             color: var(--gold);
             opacity: 0;
         }
-        
+
         .preloader-line {
             width: 120px;
             height: 2px;
@@ -174,93 +157,18 @@
             border-radius: 2px;
             overflow: hidden;
         }
-        
+
         .preloader-line-inner {
             height: 100%;
             width: 0%;
             background: var(--gold);
             border-radius: 2px;
         }
-        
+
         .user-has-visited .preloader {
             display: none !important;
         }
-        
-        /* NAVBAR */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 2rem 0;
-            transition: all 0.5s var(--ease-smooth);
-            background: transparent;
-        }
-        
-        .navbar.scrolled {
-            background: rgba(13, 27, 42, 0.92);
-            padding: 1rem 0;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--white-05);
-        }
-        
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            transition: opacity 0.3s var(--ease-out);
-        }
 
-        .logo-wrapper:hover {
-            opacity: 0.85;
-        }
-
-        .logo-wrapper img {
-            display: block;
-        }
-        
-        .nav-cta {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 0.85rem 2rem;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .nav-cta::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gold-dark);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s var(--ease-out);
-            z-index: -1;
-        }
-        
-        .nav-cta:hover::after {
-            transform: scaleX(1);
-        }
-        
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.35);
-        }
-        
         /* HERO */
         .hero {
             height: 100vh;
@@ -273,35 +181,40 @@
             color: var(--white);
             overflow: hidden;
         }
-        
+
         .hero-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
-        
+
         .hero-bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             will-change: transform;
         }
-        
+
         .hero-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                180deg,
-                rgba(13, 27, 42, 0.55) 0%,
-                rgba(13, 27, 42, 0.4) 50%,
-                rgba(13, 27, 42, 0.75) 100%
-            );
+            background: linear-gradient(180deg,
+                    rgba(13, 27, 42, 0.55) 0%,
+                    rgba(13, 27, 42, 0.4) 50%,
+                    rgba(13, 27, 42, 0.75) 100%);
         }
-        
+
         @keyframes heroFadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-content {
@@ -318,17 +231,26 @@
             text-align: center;
             animation: heroFadeIn 1s ease-out 0.3s both;
         }
-        
+
+        .hero-logo {
+            height: 72px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
         .hero h1 {
             font-size: clamp(3rem, 8vw, 5.5rem);
             margin-bottom: 2rem;
             color: var(--white);
-            line-height: 0.95; /* Reduced from 1.1 to bring lines closer */
+            line-height: 0.95;
+            /* Reduced from 1.1 to bring lines closer */
             text-align: center;
         }
-        
 
-        
+
+
         .hero-subtitle {
             font-size: 1.25rem;
             font-weight: 400;
@@ -339,10 +261,9 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
-        .hero .btn-primary {
-        }
-        
+
+        .hero .btn-primary {}
+
         .btn-primary {
             display: inline-block;
             background: var(--gold);
@@ -359,12 +280,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(201, 168, 76, 0.4);
         }
-        
+
         /* HERO SCROLL CUE */
         .hero-scroll-cue {
             position: absolute;
@@ -400,8 +321,18 @@
         }
 
         @keyframes scrollPulse {
-            0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.4; }
-            50% { transform: scaleY(1); opacity: 1; }
+
+            0%,
+            100% {
+                transform: scaleY(0.4);
+                transform-origin: top;
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
         }
 
         /* SECTIONS */
@@ -410,21 +341,24 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .center-text {
             text-align: center;
             margin-bottom: 5rem;
         }
-        
+
         .section-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Increased */
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            /* Increased */
             margin-bottom: 2rem;
             letter-spacing: -0.01em;
         }
-        
+
         .section-subtitle {
-            font-size: 1.25rem; /* Increased from 1.05rem */
-            color: #444; /* Darker for better visibility */
+            font-size: 1.25rem;
+            /* Increased from 1.05rem */
+            color: #444;
+            /* Darker for better visibility */
             max-width: 650px;
             margin: 0 auto;
             line-height: 1.7;
@@ -432,15 +366,16 @@
         }
 
         .bg-dark .section-subtitle {
-            color: var(--white-70); /* More visible on dark */
+            color: var(--white-70);
+            /* More visible on dark */
         }
-        
+
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2.5rem;
         }
-        
+
         .card {
             background: var(--white);
             padding: 0;
@@ -603,8 +538,13 @@
             transform: translateY(-50%) scale(1.08);
         }
 
-        .carousel-arrow.prev { left: 12px; }
-        .carousel-arrow.next { right: 12px; }
+        .carousel-arrow.prev {
+            left: 12px;
+        }
+
+        .carousel-arrow.next {
+            right: 12px;
+        }
 
         .carousel-dots {
             position: absolute;
@@ -639,40 +579,42 @@
         }
 
         @media (hover: none) {
-            .carousel-arrow { opacity: 1; }
+            .carousel-arrow {
+                opacity: 1;
+            }
         }
-        
+
         /* GALLERY */
         .bg-dark {
             background: var(--navy);
             color: var(--white);
         }
-        
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 280px);
             gap: 6px;
         }
-        
+
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: var(--radius-sm);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 1.2s var(--ease-out);
         }
-        
+
         .gallery-item.large {
             grid-column: span 2;
             grid-row: span 2;
         }
-        
+
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -683,22 +625,22 @@
             transform: translateY(100%);
             transition: transform 0.7s var(--ease-out);
         }
-        
+
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
-        
+
         /* MENUS */
         .bg-beige {
             background: var(--beige);
         }
-        
+
         .menu-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
         }
-        
+
         .menu-card {
             background: var(--navy);
             padding: 0;
@@ -858,20 +800,20 @@
             color: var(--gold);
             background: rgba(201, 168, 76, 0.05);
         }
-        
+
         .inclusos-bar {
             margin-top: 5rem;
             text-align: center;
             padding-top: 3rem;
             border-top: 1px solid rgba(13, 27, 42, 0.08);
         }
-        
+
         .inclusos-text {
             font-style: italic;
             color: #999;
             font-size: 0.9rem;
         }
-        
+
         /* FORM */
         .form-section-grid {
             display: grid;
@@ -879,21 +821,21 @@
             gap: 6rem;
             align-items: start;
         }
-        
+
         .form-info h2 {
             font-size: clamp(2.2rem, 4vw, 3.2rem);
             color: var(--white);
             margin-bottom: 2.5rem;
             line-height: 1.2;
         }
-        
+
         .form-bullets {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-        
+
         .form-bullets li {
             display: flex;
             align-items: center;
@@ -901,14 +843,14 @@
             color: var(--white-70);
             font-size: 1rem;
         }
-        
+
         .bullet-icon {
             width: 24px;
             height: 24px;
             color: var(--gold);
             flex-shrink: 0;
         }
-        
+
         .form-card {
             background: var(--navy-medium);
             padding: 3.5rem;
@@ -917,44 +859,47 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .form-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
             background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
         }
-        
+
         .form-card h3 {
             font-size: 1.8rem;
             margin-bottom: 2.5rem;
             text-align: center;
             color: var(--white);
         }
-        
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.25rem;
         }
-        
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-        
+
         .form-group.full {
             grid-column: span 2;
         }
-        
+
         .form-group label {
             font-size: 0.8rem;
             font-weight: 600;
             color: var(--gold);
             text-transform: uppercase;
         }
-        
+
         .form-control {
             background: var(--white-05);
             border: 1px solid var(--white-10);
@@ -965,18 +910,18 @@
             font-size: 0.95rem;
             transition: var(--transition);
         }
-        
+
         .form-control:focus {
             outline: none;
             border-color: var(--gold);
             background: rgba(201, 168, 76, 0.05);
         }
-        
+
         .toggle-group {
             display: flex;
             gap: 0.75rem;
         }
-        
+
         .toggle-btn {
             flex: 1;
             padding: 0.85rem;
@@ -988,20 +933,20 @@
             transition: var(--transition);
             font-weight: 500;
         }
-        
+
         .toggle-btn.active {
             background: var(--gold);
             color: var(--navy);
             border-color: var(--gold);
             font-weight: 700;
         }
-        
+
         .btn-submit {
             margin-top: 1.5rem;
             width: 100%;
             padding: 1.15rem;
         }
-        
+
         .form-privacy {
             margin-top: 1.5rem;
             text-align: center;
@@ -1019,30 +964,30 @@
             color: var(--gold);
             flex-shrink: 0;
         }
-        
+
         .success-message {
             display: none;
             text-align: center;
             padding: 5rem 2rem;
         }
-        
+
         .success-icon {
             width: 64px;
             height: 64px;
             color: var(--gold);
             margin: 0 auto 2rem;
         }
-        
+
         .success-message h3 {
             color: var(--gold);
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-        
+
         .success-message p {
             color: var(--white-50);
         }
-        
+
         /* BG EFFECTS */
         .section-glow {
             position: absolute;
@@ -1054,10 +999,15 @@
             pointer-events: none;
             z-index: 0;
         }
-        
-        .glow-gold { background: var(--gold); }
-        .glow-navy { background: var(--navy); }
-        
+
+        .glow-gold {
+            background: var(--gold);
+        }
+
+        .glow-navy {
+            background: var(--navy);
+        }
+
         .grain-overlay {
             position: fixed;
             inset: 0;
@@ -1068,7 +1018,7 @@
             background-repeat: repeat;
             background-size: 200px;
         }
-        
+
         /* ═══════════════════════════════════════════════════════
            LOCATION SECTION
            ═══════════════════════════════════════════════════════ */
@@ -1222,34 +1172,97 @@
 
         /* RESPONSIVE */
         @media (max-width: 991px) {
-            .section { padding: 7rem 0; }
-            .cards-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .menu-cards { grid-template-columns: 1fr; gap: 2rem; }
-            .form-section-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .form-info { text-align: center; }
-            .form-bullets { align-items: center; }
-            .location-section .container { padding: 0 1.5rem; }
-            .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .section {
+                padding: 7rem 0;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .menu-cards {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-section-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .form-info {
+                text-align: center;
+            }
+
+            .form-bullets {
+                align-items: center;
+            }
+
+            .location-section .container {
+                padding: 0 1.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto;
             }
-            .gallery-grid .gallery-item { min-height: 200px; }
-            .gallery-item.large { grid-column: span 2; min-height: 300px; }
-            .container { padding: 0 1.5rem; }
+
+            .gallery-grid .gallery-item {
+                min-height: 200px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                min-height: 300px;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
         }
-        
+
         @media (max-width: 600px) {
-            .section { padding: 5rem 0; }
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full { grid-column: span 1; }
-            .form-card { padding: 2rem 1.5rem; }
-            .nav-cta { padding: 0.65rem 1.25rem; font-size: 0.7rem; }
-            .gallery-item.large { grid-column: span 2; }
-            .menu-card-inner { padding: 2.5rem 1.75rem 2rem; }
-            .location-section { padding: 56px 0; }
-            .carousel { height: 200px; }
-            .menu-slide-image { height: 140px; }
+            .section {
+                padding: 5rem 0;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .form-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+            }
+
+            .menu-card-inner {
+                padding: 2.5rem 1.75rem 2rem;
+            }
+
+            .location-section {
+                padding: 56px 0;
+            }
+
+            .carousel {
+                height: 200px;
+            }
+
+            .menu-slide-image {
+                height: 140px;
+            }
         }
     </style>
 
@@ -1264,429 +1277,550 @@
         }
     </script>
 </head>
+
 <body>
 
-    <!-- 
-        mh-page-breakout: This container allows the landing page to break out 
-        of the fixed-width/constrained HTML box in platforms like GreatPages.
-    -->
-    <div class="mh-page-breakout">
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
 
-        <!-- Grain Texture Overlay -->
-        <div class="grain-overlay" aria-hidden="true"></div>
+    <!-- ═══ PRELOADER ═══ -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-logo">Mein Haus</div>
+        <div class="preloader-sub">Eventos</div>
+        <div class="preloader-line">
+            <div class="preloader-line-inner" id="preloaderBar"></div>
+        </div>
+    </div>
 
-        <!-- ═══ PRELOADER ═══ -->
-        <div class="preloader" id="preloader" aria-hidden="true">
-            <div class="preloader-logo">Mein Haus</div>
-            <div class="preloader-sub">Eventos</div>
-            <div class="preloader-line">
-                <div class="preloader-line-inner" id="preloaderBar"></div>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-cb72c7d21b3f844ae1c1ef4d182c489c.jpg"
+                alt="Salão de eventos premium Mein Haus" loading="eager">
+        </div>
+        <div class="hero-content">
+            <img class="hero-logo"
+                src="https://github.com/f5estrategia/EventosMeinHaus/blob/main/logo%20meins%20veneto2.png?raw=true"
+                alt="Mein Haus Eventos">
+            <span class="eyebrow center">ESPAÇO DE EVENTOS · SÃO JOSÉ, SC</span>
+            <h1>O espaço perfeito<br>para o seu evento.</h1>
+            <p class="hero-subtitle">Estrutura para até 250 pessoas. No coração de São José, SC.</p>
+            <a href="#orcamento" class="btn-primary">SOLICITAR ORÇAMENTO GRATUITO</a>
+        </div>
+    </section>
+
+    <!-- ═══ DIFERENCIAIS ═══ -->
+    <section class="section" id="diferenciais">
+        <div class="section-glow glow-gold" style="top: -200px; left: -200px;" aria-hidden="true"></div>
+        <div class="container">
+            <div class="center-text">
+                <span class="eyebrow center">POR QUE ESCOLHER A MEIN HAUS</span>
+                <h2 class="section-title">Uma experiência completa.</h2>
+                <p class="section-subtitle">Do planejamento à execução, cuidamos de cada detalhe do seu evento.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: fachada externa do espaço de eventos Mein Haus]
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: entrada do espaço de eventos]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: área externa com paisagismo]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: estacionamento e acesso]</div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
+                        <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
+                        <div class="carousel-dots" role="tablist"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Localização privilegiada</h3>
+                        <p>Situado estrategicamente em São José, na Grande Florianópolis, com fácil acesso e
+                            conveniência para todos os seus convidados.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: visão geral do salão de eventos montado]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: detalhe das mesas e cadeiras]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: iluminação e decoração do salão]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: palco ou área de destaque do salão]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: salão com uplighting colorido]</div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
+                        <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
+                        <div class="carousel-dots" role="tablist"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Estrutura para 250 pessoas</h3>
+                        <p>Salão climatizado, sonorização profissional, iluminação cênica e acessibilidade total para
+                            receber com conforto e elegância.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: mesa de buffet completa com saladas]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: pratos quentes e guarnições]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: detalhe dos pratos de entrada]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: mesa de sobremesas]</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="carousel-placeholder">[foto: cortes de carne do buffet]</div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
+                        <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
+                        <div class="carousel-dots" role="tablist"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Buffet personalizado</h3>
+                        <p>Cardápios exclusivos com opções tradicionais e premium, ingredientes selecionados para
+                            surpreender seus convidados.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- ═══ NAVBAR ═══ -->
-        <nav class="navbar" role="navigation" aria-label="Menu principal">
-            <div class="container">
-                <a href="#" class="logo-wrapper" aria-label="Mein Haus Eventos - Página inicial">
-                    <img src="./assets/logo-meinhaus-eventos.png"
-                         alt="Mein Haus Eventos"
-                         style="height: 40px; width: auto; object-fit: contain;"
-                         onerror="this.style.display='none'; document.getElementById('logo-eventos-fallback').style.display='block';">
-                    <span id="logo-eventos-fallback" style="display:none; font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; letter-spacing: 2px;">Mein Haus <span style="color: #C9A84C;">Eventos</span></span>
-                </a>
-                <a href="#orcamento" class="nav-cta">SOLICITAR ORÇAMENTO</a>
+    <!-- ═══ GALERIA ═══ -->
+    <section class="section bg-dark" id="galeria">
+        <div class="section-glow glow-gold" style="bottom: -200px; right: -200px;" aria-hidden="true"></div>
+        <div class="container">
+            <div class="center-text">
+                <span class="eyebrow center">CONHEÇA O ESPAÇO</span>
+                <h2 class="section-title">Nossa estrutura.</h2>
             </div>
-        </nav>
-
-        <!-- ═══ HERO ═══ -->
-        <section class="hero" id="home">
-            <div class="hero-bg">
-                <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-cb72c7d21b3f844ae1c1ef4d182c489c.jpg" alt="Salão de eventos premium Mein Haus" loading="eager">
-            </div>
-            <div class="hero-content">
-                <span class="eyebrow center">ESPAÇO DE EVENTOS · SÃO JOSÉ, SC</span>
-                <h1>O espaço perfeito<br>para o seu evento.</h1>
-                <p class="hero-subtitle">Estrutura para até 250 pessoas. No coração de São José, SC.</p>
-                <a href="#orcamento" class="btn-primary">SOLICITAR ORÇAMENTO GRATUITO</a>
-            </div>
-            <a href="#diferenciais" class="hero-scroll-cue" aria-label="Rolar para baixo">Descubra</a>
-        </section>
-
-        <!-- ═══ DIFERENCIAIS ═══ -->
-        <section class="section" id="diferenciais">
-            <div class="section-glow glow-gold" style="top: -200px; left: -200px;" aria-hidden="true"></div>
-            <div class="container">
-                <div class="center-text">
-                    <span class="eyebrow center">POR QUE ESCOLHER A MEIN HAUS</span>
-                    <h2 class="section-title">Uma experiência completa.</h2>
-                    <p class="section-subtitle">Do planejamento à execução, cuidamos de cada detalhe do seu evento.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-214fe0faddd19f4523354ce7effa4469.jpg"
+                        alt="Salão principal Mein Haus">
+                    <div class="gallery-overlay"><span class="gallery-label">Salão principal</span></div>
                 </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="carousel" data-carousel>
+                <div class="gallery-item">
+                    <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-23666f6ed5dc13704242938de63e1395.jpg"
+                        alt="Detalhes de decoração">
+                    <div class="gallery-overlay"><span class="gallery-label">Decoração</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-0b3a884b1d68ede488b154b71a9c6044.jpeg"
+                        alt="Mesa posta elegante">
+                    <div class="gallery-overlay"><span class="gallery-label">Mesa posta</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-96cb5a2fd72bc1dc296d02d74e95e037.jpeg"
+                        alt="Buffet premium">
+                    <div class="gallery-overlay"><span class="gallery-label">Buffet</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-cb72c7d21b3f844ae1c1ef4d182c489c.jpg"
+                        alt="Vista geral do espaço">
+                    <div class="gallery-overlay"><span class="gallery-label">Vista Geral</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ MENUS ═══ -->
+    <section class="section bg-beige" id="menus">
+        <div class="section-glow glow-navy" style="top: -200px; right: -300px;" aria-hidden="true"></div>
+        <div class="container">
+            <div class="center-text">
+                <span class="eyebrow center">CARDÁPIOS</span>
+                <h2 class="section-title">Escolha o menu do seu evento.</h2>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-card">
+                    <span class="menu-number" aria-hidden="true">01</span>
+                    <div class="menu-card-inner">
+                        <h3>Tradicional</h3>
+                        <p class="menu-tagline">Sabores clássicos que agradam a todos os convidados.</p>
+                        <div class="menu-carousel" data-carousel data-counter="true">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: fachada externa do espaço de eventos Mein Haus]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: entrada do espaço de eventos]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: área externa com paisagismo]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: estacionamento e acesso]</div></div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: frango assado dourado]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Frango assado</h4>
+                                        <p>Dourado e suculento, temperado na casa</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: prato de massa com molho]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Massa ao molho</h4>
+                                        <p>Massa fresca com molho artesanal</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: arroz branco e feijão]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Arroz e feijão</h4>
+                                        <p>Tradicional, soltinho e na medida</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: farofa temperada]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Farofa especial</h4>
+                                        <p>Receita da casa com toque crocante</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: mesa de saladas frescas]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Saladas variadas</h4>
+                                        <p>Folhas e legumes selecionados</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: legumes na grelha]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Legumes grelhados</h4>
+                                        <p>Da estação, levemente temperados</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: bebidas na mesa]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Refrigerantes</h4>
+                                        <p>Linha completa à vontade</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: sucos coloridos]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Suco natural</h4>
+                                        <p>Sabores frescos da estação</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: garrafas de água]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Água mineral</h4>
+                                        <p>Com e sem gás à vontade</p>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
-                            <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
+                            <button class="carousel-arrow prev" aria-label="Prato anterior" type="button">‹</button>
+                            <button class="carousel-arrow next" aria-label="Próximo prato" type="button">›</button>
                             <div class="carousel-dots" role="tablist"></div>
                         </div>
-                        <div class="card-body">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <h3>Localização privilegiada</h3>
-                            <p>Situado estrategicamente em São José, na Grande Florianópolis, com fácil acesso e conveniência para todos os seus convidados.</p>
-                        </div>
+                        <div class="menu-counter">Prato <span class="counter-current">1</span> de <span
+                                class="counter-total">9</span></div>
+                        <a href="#orcamento" class="btn-ghost">Ver cardápio completo</a>
                     </div>
-                    <div class="card">
-                        <div class="carousel" data-carousel>
+                </div>
+                <div class="menu-card">
+                    <span class="menu-number" aria-hidden="true">02</span>
+                    <div class="menu-card-inner">
+                        <h3>Premium</h3>
+                        <p class="menu-tagline">Experiência gourmet com ingredientes nobres e finalização refinada.</p>
+                        <div class="menu-carousel" data-carousel data-counter="true">
                             <div class="carousel-track">
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: visão geral do salão de eventos montado]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: detalhe das mesas e cadeiras]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: iluminação e decoração do salão]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: palco ou área de destaque do salão]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: salão com uplighting colorido]</div></div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: filé mignon ao ponto]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Filé mignon</h4>
+                                        <p>Ao ponto, com finalização de manteiga</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: salmão grelhado com ervas]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Salmão grelhado</h4>
+                                        <p>Com ervas frescas e azeite extra virgem</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: risoto cremoso]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Risoto especial</h4>
+                                        <p>Cremoso, no ponto al dente</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: bandeja de canapés]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Canapés variados</h4>
+                                        <p>Seleção da casa para coquetel</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: tábua de queijos]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Queijos nobres</h4>
+                                        <p>Tábua com seleção curada</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: frios e embutidos]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Frios selecionados</h4>
+                                        <p>Composição com embutidos finos</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: petit gâteau com calda]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Petit Gâteau</h4>
+                                        <p>Com sorvete de creme e calda quente</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: taças de espumante]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Espumante</h4>
+                                        <p>Brut nacional servido gelado</p>
+                                    </div>
+                                </div>
+                                <div class="menu-slide">
+                                    <div class="menu-slide-image">
+                                        <div class="carousel-placeholder">[foto: estação de drinks]</div>
+                                    </div>
+                                    <div class="menu-slide-content">
+                                        <h4>Open bar</h4>
+                                        <p>Estação completa com drinks autorais</p>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
-                            <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
+                            <button class="carousel-arrow prev" aria-label="Prato anterior" type="button">‹</button>
+                            <button class="carousel-arrow next" aria-label="Próximo prato" type="button">›</button>
                             <div class="carousel-dots" role="tablist"></div>
                         </div>
-                        <div class="card-body">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                            <h3>Estrutura para 250 pessoas</h3>
-                            <p>Salão climatizado, sonorização profissional, iluminação cênica e acessibilidade total para receber com conforto e elegância.</p>
-                        </div>
+                        <div class="menu-counter">Prato <span class="counter-current">1</span> de <span
+                                class="counter-total">9</span></div>
+                        <a href="#orcamento" class="btn-ghost">Ver cardápio completo</a>
                     </div>
-                    <div class="card">
-                        <div class="carousel" data-carousel>
-                            <div class="carousel-track">
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: mesa de buffet completa com saladas]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: pratos quentes e guarnições]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: detalhe dos pratos de entrada]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: mesa de sobremesas]</div></div>
-                                <div class="carousel-slide"><div class="carousel-placeholder">[foto: cortes de carne do buffet]</div></div>
-                            </div>
-                            <button class="carousel-arrow prev" aria-label="Slide anterior" type="button">‹</button>
-                            <button class="carousel-arrow next" aria-label="Próximo slide" type="button">›</button>
-                            <div class="carousel-dots" role="tablist"></div>
-                        </div>
-                        <div class="card-body">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                            <h3>Buffet personalizado</h3>
-                            <p>Cardápios exclusivos com opções tradicionais e premium, ingredientes selecionados para surpreender seus convidados.</p>
+                </div>
+            </div>
+            <div class="inclusos-bar">
+                <p class="inclusos-text">Louças · Talheres · Guardanapos · Taças · Mesas · Cadeiras · Toalhas · Montagem
+                    · Desmontagem · Maitres</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ LOCALIZAÇÃO ═══ -->
+    <section class="location-section" id="localizacao">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-map">
+                    <div class="location-eyebrow-block">
+                        <span class="eyebrow">COMO CHEGAR</span>
+                        <h2>No coração de São José, SC.</h2>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8!2d-48.6!3d-27.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.+Papa+Jo%C3%A3o+XXIII%2C+25!5e0!3m2!1spt-BR!2sbr!4v1"
+                        width="100%" height="320" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Mapa Mein Haus Eventos"></iframe>
+                    <a class="map-link" href="https://maps.google.com/?q=R.+Papa+João+XXIII,+25+São+José+SC"
+                        target="_blank" rel="noopener">Abrir rota no Google Maps</a>
+                </div>
+                <div class="location-info">
+                    <div class="info-block">
+                        <span class="info-label">Endereço</span>
+                        <p>R. Papa João XXIII, 25 · Campinas · São José, SC · CEP 88101-310</p>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-label">Estrutura</span>
+                        <div class="info-chips">
+                            <span class="info-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    aria-hidden="true">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                    <path d="M9 17V7h4a3 3 0 010 6H9" />
+                                </svg>
+                                Estacionamento gratuito
+                            </span>
+                            <span class="info-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M9.5 2v3M14.5 2v3M5 8h14M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                                    <path d="M8 13h2M14 13h2M8 17h2M14 17h2" />
+                                </svg>
+                                Ambiente climatizado
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ═══ GALERIA ═══ -->
-        <section class="section bg-dark" id="galeria">
-            <div class="section-glow glow-gold" style="bottom: -200px; right: -200px;" aria-hidden="true"></div>
-            <div class="container">
-                <div class="center-text">
-                    <span class="eyebrow center">CONHEÇA O ESPAÇO</span>
-                    <h2 class="section-title">Nossa estrutura.</h2>
+    <!-- ═══ FORMULÁRIO ═══ -->
+    <section class="section bg-dark" id="orcamento">
+        <div class="section-glow glow-gold" style="top: 50%; left: -300px; transform: translateY(-50%);"
+            aria-hidden="true"></div>
+        <div class="container">
+            <div class="form-section-grid">
+                <div class="form-info">
+                    <span class="eyebrow">SOLICITE SEU ORÇAMENTO</span>
+                    <h2>Sem compromisso.<br>Resposta em até 24h.</h2>
+                    <ul class="form-bullets">
+                        <li>
+                            <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            Sem taxa de orçamento
+                        </li>
+                        <li>
+                            <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            Atendimento personalizado
+                        </li>
+                        <li>
+                            <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            Cardápio adaptável ao seu evento
+                        </li>
+                    </ul>
                 </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item large">
-                        <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-214fe0faddd19f4523354ce7effa4469.jpg" alt="Salão principal Mein Haus">
-                        <div class="gallery-overlay"><span class="gallery-label">Salão principal</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-23666f6ed5dc13704242938de63e1395.jpg" alt="Detalhes de decoração">
-                        <div class="gallery-overlay"><span class="gallery-label">Decoração</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-0b3a884b1d68ede488b154b71a9c6044.jpeg" alt="Mesa posta elegante">
-                        <div class="gallery-overlay"><span class="gallery-label">Mesa posta</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-96cb5a2fd72bc1dc296d02d74e95e037.jpeg" alt="Buffet premium">
-                        <div class="gallery-overlay"><span class="gallery-label">Buffet</span></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://files.greatpages.com.br/arquivos/paginas_editor/24366-cb72c7d21b3f844ae1c1ef4d182c489c.jpg" alt="Vista geral do espaço">
-                        <div class="gallery-overlay"><span class="gallery-label">Vista Geral</span></div>
+                <div class="form-card">
+                    <form id="contactForm" novalidate>
+                        <h3>Conte sobre seu evento</h3>
+                        <div class="form-grid">
+                            <div class="form-group full">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" class="form-control" placeholder="Seu nome completo"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000-0000"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" placeholder="seu@email.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo_evento">Tipo de evento</label>
+                                <select id="tipo_evento" class="form-control" required>
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="aniversario">Aniversário</option>
+                                    <option value="casamento">Casamento</option>
+                                    <option value="corporativo">Corporativo</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="convidados">Convidados</label>
+                                <select id="convidados" class="form-control" required>
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="ate20">Até 20</option>
+                                    <option value="20-40">20 a 40</option>
+                                    <option value="40-60">40 a 60</option>
+                                    <option value="60-100">60 a 100</option>
+                                    <option value="100+">100+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="data">Data prevista</label>
+                                <input type="text" id="data" class="form-control" placeholder="dd/mm/aaaa">
+                            </div>
+                            <div class="form-group">
+                                <label>Já tem data definida?</label>
+                                <div class="toggle-group">
+                                    <button type="button" class="toggle-btn active" data-value="sim">Sim</button>
+                                    <button type="button" class="toggle-btn" data-value="nao">Não</button>
+                                </div>
+                            </div>
+                            <div class="form-group full">
+                                <button type="submit" class="btn-primary btn-submit">SOLICITAR ORÇAMENTO
+                                    GRATUITO</button>
+                            </div>
+                        </div>
+                        <div class="form-privacy">
+                            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0110 0v4" />
+                            </svg>
+                            Seus dados estão seguros e protegidos.
+                        </div>
+                    </form>
+                    <div id="successMessage" class="success-message">
+                        <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        <h3>Recebemos sua solicitação!</h3>
+                        <p>Nossa equipe entrará em contato em breve.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- ═══ MENUS ═══ -->
-        <section class="section bg-beige" id="menus">
-            <div class="section-glow glow-navy" style="top: -200px; right: -300px;" aria-hidden="true"></div>
-            <div class="container">
-                <div class="center-text">
-                    <span class="eyebrow center">CARDÁPIOS</span>
-                    <h2 class="section-title">Escolha o menu do seu evento.</h2>
-                </div>
-                <div class="menu-cards">
-                    <div class="menu-card">
-                        <span class="menu-number" aria-hidden="true">01</span>
-                        <div class="menu-card-inner">
-                            <h3>Tradicional</h3>
-                            <p class="menu-tagline">Sabores clássicos que agradam a todos os convidados.</p>
-                            <div class="menu-carousel" data-carousel data-counter="true">
-                                <div class="carousel-track">
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: frango assado dourado]</div></div>
-                                        <div class="menu-slide-content"><h4>Frango assado</h4><p>Dourado e suculento, temperado na casa</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: prato de massa com molho]</div></div>
-                                        <div class="menu-slide-content"><h4>Massa ao molho</h4><p>Massa fresca com molho artesanal</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: arroz branco e feijão]</div></div>
-                                        <div class="menu-slide-content"><h4>Arroz e feijão</h4><p>Tradicional, soltinho e na medida</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: farofa temperada]</div></div>
-                                        <div class="menu-slide-content"><h4>Farofa especial</h4><p>Receita da casa com toque crocante</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: mesa de saladas frescas]</div></div>
-                                        <div class="menu-slide-content"><h4>Saladas variadas</h4><p>Folhas e legumes selecionados</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: legumes na grelha]</div></div>
-                                        <div class="menu-slide-content"><h4>Legumes grelhados</h4><p>Da estação, levemente temperados</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: bebidas na mesa]</div></div>
-                                        <div class="menu-slide-content"><h4>Refrigerantes</h4><p>Linha completa à vontade</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: sucos coloridos]</div></div>
-                                        <div class="menu-slide-content"><h4>Suco natural</h4><p>Sabores frescos da estação</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: garrafas de água]</div></div>
-                                        <div class="menu-slide-content"><h4>Água mineral</h4><p>Com e sem gás à vontade</p></div>
-                                    </div>
-                                </div>
-                                <button class="carousel-arrow prev" aria-label="Prato anterior" type="button">‹</button>
-                                <button class="carousel-arrow next" aria-label="Próximo prato" type="button">›</button>
-                                <div class="carousel-dots" role="tablist"></div>
-                            </div>
-                            <div class="menu-counter">Prato <span class="counter-current">1</span> de <span class="counter-total">9</span></div>
-                            <a href="#orcamento" class="btn-ghost">Ver cardápio completo</a>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <span class="menu-number" aria-hidden="true">02</span>
-                        <div class="menu-card-inner">
-                            <h3>Premium</h3>
-                            <p class="menu-tagline">Experiência gourmet com ingredientes nobres e finalização refinada.</p>
-                            <div class="menu-carousel" data-carousel data-counter="true">
-                                <div class="carousel-track">
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: filé mignon ao ponto]</div></div>
-                                        <div class="menu-slide-content"><h4>Filé mignon</h4><p>Ao ponto, com finalização de manteiga</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: salmão grelhado com ervas]</div></div>
-                                        <div class="menu-slide-content"><h4>Salmão grelhado</h4><p>Com ervas frescas e azeite extra virgem</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: risoto cremoso]</div></div>
-                                        <div class="menu-slide-content"><h4>Risoto especial</h4><p>Cremoso, no ponto al dente</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: bandeja de canapés]</div></div>
-                                        <div class="menu-slide-content"><h4>Canapés variados</h4><p>Seleção da casa para coquetel</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: tábua de queijos]</div></div>
-                                        <div class="menu-slide-content"><h4>Queijos nobres</h4><p>Tábua com seleção curada</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: frios e embutidos]</div></div>
-                                        <div class="menu-slide-content"><h4>Frios selecionados</h4><p>Composição com embutidos finos</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: petit gâteau com calda]</div></div>
-                                        <div class="menu-slide-content"><h4>Petit Gâteau</h4><p>Com sorvete de creme e calda quente</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: taças de espumante]</div></div>
-                                        <div class="menu-slide-content"><h4>Espumante</h4><p>Brut nacional servido gelado</p></div>
-                                    </div>
-                                    <div class="menu-slide">
-                                        <div class="menu-slide-image"><div class="carousel-placeholder">[foto: estação de drinks]</div></div>
-                                        <div class="menu-slide-content"><h4>Open bar</h4><p>Estação completa com drinks autorais</p></div>
-                                    </div>
-                                </div>
-                                <button class="carousel-arrow prev" aria-label="Prato anterior" type="button">‹</button>
-                                <button class="carousel-arrow next" aria-label="Próximo prato" type="button">›</button>
-                                <div class="carousel-dots" role="tablist"></div>
-                            </div>
-                            <div class="menu-counter">Prato <span class="counter-current">1</span> de <span class="counter-total">9</span></div>
-                            <a href="#orcamento" class="btn-ghost">Ver cardápio completo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inclusos-bar">
-                    <p class="inclusos-text">Louças · Talheres · Guardanapos · Taças · Mesas · Cadeiras · Toalhas · Montagem · Desmontagem · Maitres</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ LOCALIZAÇÃO ═══ -->
-        <section class="location-section" id="localizacao">
-            <div class="container">
-                <div class="location-grid">
-                    <div class="location-map">
-                        <div class="location-eyebrow-block">
-                            <span class="eyebrow">COMO CHEGAR</span>
-                            <h2>No coração de São José, SC.</h2>
-                        </div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8!2d-48.6!3d-27.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.+Papa+Jo%C3%A3o+XXIII%2C+25!5e0!3m2!1spt-BR!2sbr!4v1"
-                            width="100%" height="320" allowfullscreen loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Mapa Mein Haus Eventos"></iframe>
-                        <a class="map-link" href="https://maps.google.com/?q=R.+Papa+João+XXIII,+25+São+José+SC" target="_blank" rel="noopener">Abrir rota no Google Maps</a>
-                    </div>
-                    <div class="location-info">
-                        <div class="info-block">
-                            <span class="info-label">Endereço</span>
-                            <p>R. Papa João XXIII, 25 · Campinas · São José, SC · CEP 88101-310</p>
-                        </div>
-                        <div class="info-block">
-                            <span class="info-label">Seg a Sex</span>
-                            <p>11h30 — 15h · 19h — 23h</p>
-                            <p class="info-sub">Almoço e jantar</p>
-                        </div>
-                        <div class="info-block">
-                            <span class="info-label">Fim de semana</span>
-                            <p>Sáb: 11h30 — 16h · 19h — 23h</p>
-                            <p>Domingo: 11h30 — 16h</p>
-                        </div>
-                        <div class="info-block">
-                            <span class="info-label">Estrutura</span>
-                            <div class="info-chips">
-                                <span class="info-chip">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 010 6H9"/></svg>
-                                    Estacionamento gratuito
-                                </span>
-                                <span class="info-chip">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9.5 2v3M14.5 2v3M5 8h14M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M8 13h2M14 13h2M8 17h2M14 17h2"/></svg>
-                                    Ambiente climatizado
-                                </span>
-                                <span class="info-chip">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                                    280 lugares
-                                </span>
-                                <span class="info-chip">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                                    Aceita cartões
-                                </span>
-                                <span class="info-chip">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9v.01M9 13v.01M9 17v.01M15 9v.01M15 13v.01M15 17v.01"/></svg>
-                                    Espaço para eventos
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ FORMULÁRIO ═══ -->
-        <section class="section bg-dark" id="orcamento">
-            <div class="section-glow glow-gold" style="top: 50%; left: -300px; transform: translateY(-50%);" aria-hidden="true"></div>
-            <div class="container">
-                <div class="form-section-grid">
-                    <div class="form-info">
-                        <span class="eyebrow">SOLICITE SEU ORÇAMENTO</span>
-                        <h2>Sem compromisso.<br>Resposta em até 24h.</h2>
-                        <ul class="form-bullets">
-                            <li>
-                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                                Sem taxa de orçamento
-                            </li>
-                            <li>
-                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                                Atendimento personalizado
-                            </li>
-                            <li>
-                                <svg class="bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                                Cardápio adaptável ao seu evento
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="form-card">
-                        <form id="contactForm" novalidate>
-                            <h3>Conte sobre seu evento</h3>
-                            <div class="form-grid">
-                                <div class="form-group full">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000-0000" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="tipo_evento">Tipo de evento</label>
-                                    <select id="tipo_evento" class="form-control" required>
-                                        <option value="" disabled selected>Selecione...</option>
-                                        <option value="aniversario">Aniversário</option>
-                                        <option value="casamento">Casamento</option>
-                                        <option value="corporativo">Corporativo</option>
-                                        <option value="outro">Outro</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="convidados">Convidados</label>
-                                    <select id="convidados" class="form-control" required>
-                                        <option value="" disabled selected>Selecione...</option>
-                                        <option value="ate20">Até 20</option>
-                                        <option value="20-40">20 a 40</option>
-                                        <option value="40-60">40 a 60</option>
-                                        <option value="60-100">60 a 100</option>
-                                        <option value="100+">100+</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="data">Data prevista</label>
-                                    <input type="text" id="data" class="form-control" placeholder="dd/mm/aaaa">
-                                </div>
-                                <div class="form-group">
-                                    <label>Já tem data definida?</label>
-                                    <div class="toggle-group">
-                                        <button type="button" class="toggle-btn active" data-value="sim">Sim</button>
-                                        <button type="button" class="toggle-btn" data-value="nao">Não</button>
-                                    </div>
-                                </div>
-                                <div class="form-group full">
-                                    <button type="submit" class="btn-primary btn-submit">SOLICITAR ORÇAMENTO GRATUITO</button>
-                                </div>
-                            </div>
-                            <div class="form-privacy">
-                                <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                                Seus dados estão seguros e protegidos.
-                            </div>
-                        </form>
-                        <div id="successMessage" class="success-message">
-                            <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <h3>Recebemos sua solicitação!</h3>
-                            <p>Nossa equipe entrará em contato em breve.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div><!-- /.mh-page-breakout -->
+        </div>
+    </section>
 
     <!-- ═══ SCRIPTS (Inlined) ═══ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -1697,11 +1831,11 @@
             'use strict';
 
             // ── 1. PRELOADER ──
-            const preloader     = document.getElementById('preloader');
-            const preloaderBar  = document.getElementById('preloaderBar');
+            const preloader = document.getElementById('preloader');
+            const preloaderBar = document.getElementById('preloaderBar');
             const preloaderLogo = document.querySelector('.preloader-logo');
-            const preloaderSub  = document.querySelector('.preloader-sub');
-            const isReturning   = document.documentElement.classList.contains('user-has-visited');
+            const preloaderSub = document.querySelector('.preloader-sub');
+            const isReturning = document.documentElement.classList.contains('user-has-visited');
 
             function runPreloader() {
                 return new Promise(resolve => {
@@ -1710,15 +1844,15 @@
                     const tl = gsap.timeline({ onComplete: resolve });
 
                     tl.to(preloaderLogo, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
-                      .to(preloaderSub,  { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.2')
-                      .to(preloaderBar,  { width: '100%', duration: 1.4, ease: 'power2.inOut' }, '-=0.2')
-                      .to(preloader,     {
-                          clipPath: 'inset(0 0 100% 0)',
-                          duration: 1,
-                          ease: 'power4.inOut',
-                          delay: 0.3
-                      })
-                      .set(preloader, { display: 'none' });
+                        .to(preloaderSub, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.2')
+                        .to(preloaderBar, { width: '100%', duration: 1.4, ease: 'power2.inOut' }, '-=0.2')
+                        .to(preloader, {
+                            clipPath: 'inset(0 0 100% 0)',
+                            duration: 1,
+                            ease: 'power4.inOut',
+                            delay: 0.3
+                        })
+                        .set(preloader, { display: 'none' });
 
                     localStorage.setItem('mhVisited', Date.now());
                 });
@@ -1747,9 +1881,6 @@
             function initAnimations() {
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Removed GSAP Hero Timeline because GreatPages blocks or delays it, causing text to hide permanently.
-                // Hero animation is now handled via reliable CSS keyframes.
-
                 gsap.to('.hero-bg img', {
                     yPercent: 20,
                     ease: 'none',
@@ -1762,8 +1893,8 @@
                 });
 
                 gsap.utils.toArray('.center-text').forEach(block => {
-                    const eyebrow  = block.querySelector('.eyebrow');
-                    const title    = block.querySelector('.section-title');
+                    const eyebrow = block.querySelector('.eyebrow');
+                    const title = block.querySelector('.section-title');
                     const subtitle = block.querySelector('.section-subtitle');
 
                     const tl = gsap.timeline({
@@ -1775,14 +1906,13 @@
                     });
 
                     if (eyebrow) tl.from(eyebrow, { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' });
-                    if (title)   tl.from(title,   { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3');
+                    if (title) tl.from(title, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3');
                     if (subtitle) tl.from(subtitle, { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4');
                 });
 
-                /* Removing opacity animation from cards to guarantee they show up in GreatPages */
                 gsap.from('.card', {
-                    scrollTrigger: { 
-                        trigger: '.cards-grid', 
+                    scrollTrigger: {
+                        trigger: '.cards-grid',
                         start: 'top 90%',
                         toggleActions: 'play none none none'
                     },
@@ -1794,8 +1924,8 @@
 
                 gsap.utils.toArray('.gallery-item').forEach((item, i) => {
                     gsap.from(item, {
-                        scrollTrigger: { 
-                            trigger: item, 
+                        scrollTrigger: {
+                            trigger: item,
                             start: 'top 92%' // More lenient trigger
                         },
                         clipPath: 'inset(100% 0% 0% 0%)',
@@ -1807,8 +1937,8 @@
 
                 gsap.utils.toArray('.menu-card').forEach((card, i) => {
                     gsap.from(card, {
-                        scrollTrigger: { 
-                            trigger: card, 
+                        scrollTrigger: {
+                            trigger: card,
                             start: 'top 90%'
                         },
                         scale: 0.95,
@@ -1967,23 +2097,12 @@
                     carousel.setAttribute('tabindex', '0');
                     carousel.addEventListener('keydown', (e) => {
                         if (e.key === 'ArrowRight') { e.preventDefault(); next(); startAuto(); }
-                        if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); startAuto(); }
+                        if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); startAuto(); }
                     });
 
                     goTo(0, false);
                     startAuto();
                 });
-            }
-
-            function initNavbar() {
-                const navbar = document.querySelector('.navbar');
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 80) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                }, { passive: true });
             }
 
             function fixTypography() {
@@ -2004,9 +2123,9 @@
             }
 
             function initForm() {
-                const form    = document.getElementById('contactForm');
+                const form = document.getElementById('contactForm');
                 const success = document.getElementById('successMessage');
-                const card    = document.querySelector('.form-card');
+                const card = document.querySelector('.form-card');
 
                 if (!form) return;
 
@@ -2041,9 +2160,9 @@
                     let v = e.target.value.replace(/\D/g, '');
                     if (v.length > 11) v = v.slice(0, 11);
                     if (v.length > 6) {
-                        v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+                        v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
                     } else if (v.length > 2) {
-                        v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+                        v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
                     } else if (v.length > 0) {
                         v = `(${v}`;
                     }
@@ -2055,7 +2174,6 @@
                 await runPreloader();
                 initLenis();
                 initAnimations();
-                initNavbar();
                 fixTypography();
                 initToggle();
                 initForm();
@@ -2066,21 +2184,6 @@
                 setTimeout(() => {
                     ScrollTrigger.refresh();
                 }, 500);
-
-                // GreatPages Height Sync Fix
-                const syncHeight = () => {
-                    if (window.self !== window.top) {
-                        const h = document.documentElement.scrollHeight;
-                        window.parent.postMessage({ type: 'resize', height: h }, '*');
-                    }
-                };
-                
-                const resizeObserver = new ResizeObserver(() => {
-                    syncHeight();
-                    ScrollTrigger.refresh();
-                });
-                resizeObserver.observe(document.body);
-                window.addEventListener('load', syncHeight);
             });
 
         })();
@@ -2095,4 +2198,5 @@
         })();
     </script>
 </body>
+
 </html>
